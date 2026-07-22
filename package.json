@@ -1,0 +1,27 @@
+{
+  "name": "mini-microservice",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "start": "npm run build && npm run start -w backend",
+    "dev:backend": "npm run start:dev -w backend",
+    "dev:frontend": "npm run build:watch -w frontend",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:e2e": "npm run build && node --test tests/full-stack.e2e.test.mjs",
+    "verify": "npm run format:check && npm run test:e2e"
+  },
+  "devDependencies": {
+    "dotenv": "^16.6.1",
+    "playwright-core": "1.54.1",
+    "prettier": "3.6.2"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
