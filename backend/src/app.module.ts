@@ -1,4 +1,4 @@
-import path from 'node:path';
+import { sep } from 'node:path';
 
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
@@ -13,18 +13,29 @@ import { HealthController } from './health.controller';
   controllers: [HealthController],
   imports: [
     ServeStaticModule.forRoot({
-      exclude: ['/api/{*path}'],
       rootPath: config.frontendDistDir,
+
+      // /api bilan boshlangan hamma request NestJS controllerlarga o'tadi,
+      // React static fallback ularni ushlab qolmaydi.
+      exclude: ['/api{/*path}'],
+
       serveStaticOptions: {
         setHeaders(response, filePath) {
           if (filePath.endsWith('index.html')) {
             response.setHeader('Cache-Control', 'no-cache');
-          } else if (filePath.includes(`${path.sep}assets${path.sep}`)) {
-            response.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+            return;
+          }
+
+          if (filePath.includes(`${sep}assets${sep}`)) {
+            response.setHeader(
+              'Cache-Control',
+              'public, max-age=31536000, immutable',
+            );
           }
         },
       },
     }),
+
     AuthModule,
     DevicesModule,
     AnalyticsModule,

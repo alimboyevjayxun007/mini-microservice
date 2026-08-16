@@ -53,7 +53,7 @@ export class DevicesController {
   @Get(':deviceId')
   @UseGuards(AccessGuard)
   @ApiBearerAuth('access-token')
-  @ApiOperation({ summary: 'Bitta device’ni ID bo‘yicha olish' })
+  @ApiOperation({ summary: 'Bitta device’ni ID boyicha olish' })
   @ApiParam({ name: 'deviceId', example: 'esp32-01' })
   @ApiOkResponse({ type: DeviceResponseDto })
   @ApiNotFoundResponse({ type: ApiErrorDto })
@@ -67,7 +67,7 @@ export class DevicesController {
   @ApiBearerAuth('access-token')
   @ApiOperation({ summary: 'Yangi device yaratish' })
   @ApiCreatedResponse({ type: DeviceResponseDto })
-  @ApiBadRequestResponse({ description: 'Request validatsiyadan o‘tmadi', type: ApiErrorDto })
+  @ApiBadRequestResponse({ description: 'Request validatsiyadan otmadi', type: ApiErrorDto })
   @ApiConflictResponse({ description: 'Device ID mavjud', type: ApiErrorDto })
   @ApiUnauthorizedResponse({ type: ApiErrorDto })
   create(@Body() body: CreateDeviceDto) {
@@ -80,7 +80,7 @@ export class DevicesController {
   @ApiOperation({ summary: 'Device nomi, API key yoki enabled holatini yangilash' })
   @ApiParam({ name: 'deviceId', example: 'esp32-01' })
   @ApiOkResponse({ type: DeviceResponseDto })
-  @ApiBadRequestResponse({ description: 'Request validatsiyadan o‘tmadi', type: ApiErrorDto })
+  @ApiBadRequestResponse({ description: 'Request validatsiyadan otmadi', type: ApiErrorDto })
   @ApiNotFoundResponse({ type: ApiErrorDto })
   @ApiUnauthorizedResponse({ type: ApiErrorDto })
   update(@Param('deviceId') deviceId: string, @Body() body: UpdateDeviceDto) {
@@ -90,7 +90,7 @@ export class DevicesController {
   @Delete(':deviceId')
   @UseGuards(AccessGuard)
   @ApiBearerAuth('access-token')
-  @ApiOperation({ summary: 'Device’ni o‘chirish' })
+  @ApiOperation({ summary: 'Device’ni ochirish' })
   @ApiParam({ name: 'deviceId', example: 'esp32-01' })
   @ApiOkResponse({ type: DeleteDeviceResponseDto })
   @ApiNotFoundResponse({ type: ApiErrorDto })
@@ -104,8 +104,8 @@ export class DevicesController {
   @ApiOperation({ summary: 'Device credentiallarini tekshirib ElevenLabs URL olish' })
   @ApiParam({ name: 'deviceId', example: 'esp32-01' })
   @ApiCreatedResponse({ type: ConversationUrlResponseDto })
-  @ApiBadRequestResponse({ description: 'Request validatsiyadan o‘tmadi', type: ApiErrorDto })
-  @ApiUnauthorizedResponse({ description: 'Device credentiallari noto‘g‘ri', type: ApiErrorDto })
+  @ApiBadRequestResponse({ description: 'Request validatsiyadan otmadi', type: ApiErrorDto })
+  @ApiUnauthorizedResponse({ description: 'Device credentiallari notogri', type: ApiErrorDto })
   conversation(
     @Param('deviceId') deviceId: string,
     @Headers('x-api-key') headerDeviceId: string | undefined,

@@ -1,4 +1,4 @@
-import { Controller, Get, Param, UseGuards } from '@nestjs/common';
+import { Controller, Get, Param, Query, UseGuards } from '@nestjs/common';
 import {
   ApiBearerAuth,
   ApiExtraModels,
@@ -16,6 +16,7 @@ import {
   AnalyticsOverviewDto,
   DeviceAnalyticsDto,
   DeviceEventsResponseDto,
+  DeviceEventsQueryDto,
 } from './analytics.dto';
 import { AnalyticsService } from './analytics.service';
 
@@ -43,10 +44,10 @@ export class AnalyticsController {
   }
 
   @Get('devices/:deviceId')
-  @ApiOperation({ summary: 'Bitta device audit eventlarini olish' })
+  @ApiOperation({ summary: 'Bitta device audit eventlarini 20 tadan olish' })
   @ApiParam({ name: 'deviceId', example: 'esp32-01' })
   @ApiOkResponse({ type: DeviceEventsResponseDto })
-  device(@Param('deviceId') deviceId: string) {
-    return this.analytics.byDevice(deviceId);
+  device(@Param('deviceId') deviceId: string, @Query() query: DeviceEventsQueryDto) {
+    return this.analytics.byDevice(deviceId, query.page);
   }
 }

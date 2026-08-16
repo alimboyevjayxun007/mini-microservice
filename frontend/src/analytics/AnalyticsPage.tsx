@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { api } from '../api/client';
 
@@ -95,7 +96,14 @@ export function AnalyticsPage() {
               <tbody>
                 {Object.values(data.devices).map((device) => (
                   <tr key={device.deviceId}>
-                    <td className="mono">{device.deviceId}</td>
+                    <td className="mono">
+                      <Link
+                        className="device-link"
+                        to={`/analytics/devices/${encodeURIComponent(device.deviceId)}`}
+                      >
+                        {device.deviceId}
+                      </Link>
+                    </td>
                     <td>{device.connects}</td>
                     <td>{device.rejected}</td>
                     <td>{device.errors}</td>

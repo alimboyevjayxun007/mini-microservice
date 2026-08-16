@@ -125,12 +125,17 @@ h1 {
   cursor: pointer;
   transition:
     border-color 150ms ease,
-    background 150ms ease;
+    background 150ms ease,
+    transform 100ms ease;
 }
 
 .button:hover:not(:disabled) {
   border-color: #7398f7;
   background: #4776eb;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(1.04);
 }
 
 .button:disabled {
@@ -211,6 +216,31 @@ input::placeholder {
   overflow-x: auto;
 }
 
+.device-link,
+.back-link {
+  color: #8eacff;
+  text-decoration: none;
+}
+
+.device-link:hover,
+.back-link:hover {
+  color: #b5c8ff;
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.device-analytics-header {
+  align-items: center;
+}
+
+.device-title {
+  overflow-wrap: anywhere;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -258,6 +288,21 @@ tbody tr:last-child td {
   background: #3d1b24;
 }
 
+.status--success {
+  color: #7aebad;
+  background: #143624;
+}
+
+.status--rejected {
+  color: #ffd37a;
+  background: #3b2d14;
+}
+
+.status--error {
+  color: #ffb0ba;
+  background: #3d1b24;
+}
+
 .actions {
   display: flex;
   align-items: center;
@@ -289,6 +334,38 @@ tbody tr:last-child td {
 
 .metric strong {
   font-size: 1.8rem;
+}
+
+.detail-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  color: #929fb3;
+}
+
+.detail-summary strong {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.detail-summary span:last-child {
+  margin-left: auto;
+}
+
+.event-id {
+  max-width: 20rem;
+  overflow-wrap: anywhere;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: #929fb3;
 }
 
 .empty,
@@ -323,6 +400,16 @@ tbody tr:last-child td {
 
   .page-header {
     align-items: flex-start;
+  }
+
+  .pagination {
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .pagination span {
+    font-size: 0.8rem;
+    text-align: center;
   }
 
   .device-form,

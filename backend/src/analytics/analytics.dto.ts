@@ -1,4 +1,8 @@
-import { ApiProperty, getSchemaPath } from '@nestjs/swagger';
+import { ApiProperty, ApiPropertyOptional, getSchemaPath } from '@nestjs/swagger';
+import { Type } from 'class-transformer';
+import { IsInt, IsOptional, Min } from 'class-validator';
+
+export const DEVICE_EVENTS_PAGE_SIZE = 20;
 
 export class AnalyticsEventDto {
   @ApiProperty({ example: '19cf3082-5d7a-4cf5-82c6-13f0d6aa848e', format: 'uuid' })
@@ -73,4 +77,25 @@ export class DeviceEventsResponseDto {
 
   @ApiProperty({ isArray: true, type: AnalyticsEventDto })
   events!: AnalyticsEventDto[];
+
+  @ApiProperty({ example: 1, minimum: 1 })
+  page!: number;
+
+  @ApiProperty({ example: DEVICE_EVENTS_PAGE_SIZE })
+  pageSize!: number;
+
+  @ApiProperty({ example: 42, minimum: 0 })
+  total!: number;
+
+  @ApiProperty({ example: 3, minimum: 0 })
+  totalPages!: number;
+}
+
+export class DeviceEventsQueryDto {
+  @ApiPropertyOptional({ default: 1, example: 1, minimum: 1 })
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(1)
+  page = 1;
 }

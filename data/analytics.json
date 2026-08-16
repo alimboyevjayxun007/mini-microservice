@@ -1,1 +1,149 @@
-[]
+[
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "fa2735a0-0ea0-4166-b9e7-5d19be442567",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-22T06:48:04.387Z",
+    "result": "rejected"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "713f279a-d291-4dd0-9fb4-4b9700db8503",
+    "latencyMs": 0,
+    "requestedAt": "2026-07-22T06:48:23.721Z",
+    "result": "rejected"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "430ba808-4490-4c2a-a834-75bcdc031de3",
+    "latencyMs": 5,
+    "requestedAt": "2026-07-22T06:48:24.045Z",
+    "result": "rejected"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "e24f1fe2-ce25-4ffb-ae61-a1ca5dbc0ea0",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-22T06:48:24.207Z",
+    "result": "rejected"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "3a9ba504-145f-4a5a-a96f-7df1cb6cea8f",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-22T06:51:04.234Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "c93ead10-fe93-4278-9161-d955a1e12e90",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-22T06:51:15.606Z",
+    "result": "rejected"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "463ebbad-2a25-4f05-b245-98273d130f3f",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-22T06:51:21.459Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "c5b63101-2acd-4c55-b947-03e4662e9f99",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:42:45.273Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "1c808f4a-a07d-477b-ba99-ac2ff5285a20",
+    "latencyMs": 0,
+    "requestedAt": "2026-07-23T11:42:52.165Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "e4967cc8-9a2f-4a66-881c-0d6950d061e2",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:42:58.910Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "e215899a-3579-4936-8039-e3e6d0cd6153",
+    "latencyMs": 0,
+    "requestedAt": "2026-07-23T11:42:59.600Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "aa687eb5-fd7c-4d37-b9fb-0c5fb415311a",
+    "latencyMs": 0,
+    "requestedAt": "2026-07-23T11:43:32.657Z",
+    "result": "rejected"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "36222894-6431-48c9-84ca-0b3fabef36b7",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:43:38.425Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "c77a50c2-2f71-4f8b-aa62-a2bce40cbe17",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:59:53.009Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "c21aec53-ea1d-4fb2-9cb0-29fa9e822d6c",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:59:53.708Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "d4b6e352-d785-4d93-a4f0-48e27778f8c0",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:59:54.391Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "b89a80f4-811b-4ff9-ae5b-10059df2a784",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T11:59:54.951Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "b7b33395-07b7-42b1-ae34-d44a4f34f302",
+    "latencyMs": 0,
+    "requestedAt": "2026-07-23T12:00:00.032Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "0c5ad8d3-1eda-4167-ae7f-dc895046e0c3",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T12:00:00.364Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "f39b5c21-c35f-428d-970d-9b9ee970ff79",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T12:00:01.958Z",
+    "result": "success"
+  },
+  {
+    "deviceId": "mobil-urllll",
+    "eventId": "09803527-9c4e-4f0a-9e8e-287338b6f746",
+    "latencyMs": 1,
+    "requestedAt": "2026-07-23T12:00:02.566Z",
+    "result": "success"
+  }
+]

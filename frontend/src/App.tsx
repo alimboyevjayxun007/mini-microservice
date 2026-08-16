@@ -1,6 +1,7 @@
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 
 import { AnalyticsPage } from './analytics/AnalyticsPage';
+import { DeviceAnalyticsPage } from './analytics/DeviceAnalyticsPage';
 import { useAuth } from './auth/AuthProvider';
 import { DevicesPage } from './devices/DevicesPage';
 import { LoginPage } from './pages/LoginPage';
@@ -52,6 +53,10 @@ export function App() {
           <Route
             element={authenticated ? <AnalyticsPage /> : <Navigate replace to="/login" />}
             path="/analytics"
+          />
+          <Route
+            element={authenticated ? <DeviceAnalyticsPage /> : <Navigate replace to="/login" />}
+            path="/analytics/devices/:deviceId"
           />
           <Route
             element={<Navigate replace to={authenticated ? '/devices' : '/login'} />}

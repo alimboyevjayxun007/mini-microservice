@@ -47,9 +47,17 @@ npm start
 Frontend uchun alohida HTTP port yoki Vite server ochilmaydi.
 
 Swagger va OpenAPI fayllari public: ularni ochish uchun token talab qilinmaydi. Admin
-CRUD endpointlarini Swagger’dan bajarish uchun avval `/api/auth/login` orqali access
-token olib, `Authorize` oynasidagi `access-token` maydoniga kiriting. Conversation URL
-endpointi uchun `device-id` maydoniga device ID yoziladi.
+paneldagi faol sessiyadan Swagger avtomatik access token oladi. Swagger to‘g‘ridan-to‘g‘ri
+ochilgan bo‘lsa, `/api/auth/login` so‘rovini muvaffaqiyatli bajarish keyingi admin
+so‘rovlarini avtomatik avtorizatsiya qiladi; tokenni `Authorize` oynasidagi `access-token`
+maydoniga qo‘lda kiritish ham mumkin. Conversation URL endpointi uchun `device-id`
+maydoniga device ID yoziladi.
+
+Device’ning barcha analytics hodisalari eng yangisidan boshlab 20 tadan qaytadi:
+
+```text
+GET /api/analytics/devices/:deviceId?page=1
+```
 
 ## Development watch
 
